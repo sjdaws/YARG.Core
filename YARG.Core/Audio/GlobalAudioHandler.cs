@@ -512,6 +512,11 @@ namespace YARG.Core.Audio
                         foreach (DrumSampleChannel sample in _instance.DrumSfxSamples)
                             sample?.SetOutputChannel(channel);
                         break;
+                    
+                    case SongStem.Metronome:
+                        foreach (MetronomeSampleChannel sample in _instance.MetronomeSamples)
+                            sample?.SetOutputChannel(channel);
+                        break;
 
                     case SongStem.Sfx:
                         foreach (SampleChannel sample in _instance.SfxSamples)
